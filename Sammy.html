@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Sammy Rizitos ✨</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rosa: #f4c2d7;
+      --lila: #b39ddb;
+      --morado: #6a1b9a;
+      --negro: #0f0f14;
+      --blanco: #faf7fb;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #1a0624, #0f0f14);
+      color: var(--blanco);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    .intro {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top, #2a0a3d, #000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+    }
+
+    .intro button {
+      background: linear-gradient(45deg, #ff8fd8, #b46cff);
+      border: none;
+      color: white;
+      font-size: 1.4rem;
+      padding: 20px 45px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 30px rgba(255,140,216,0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .intro button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 45px rgba(255,140,216,1);
+    }
+
+    .flores span {
+      position: fixed;
+      top: -10%;
+      font-size: 1.5rem;
+      animation: caer 18s linear infinite;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    .flores span:nth-child(1){ left:10%; }
+    .flores span:nth-child(2){ left:35%; animation-delay:3s; }
+    .flores span:nth-child(3){ left:60%; animation-delay:6s; }
+    .flores span:nth-child(4){ left:85%; animation-delay:9s; }
+
+    @keyframes caer {
+      to { transform: translateY(120vh) rotate(360deg); }
+    }
+
+    section {
+      padding: 90px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1.2s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    h1 { font-size: 3.2rem; margin-bottom: 20px; }
+    h2 { font-size: 2.2rem; margin-bottom: 25px; }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    .lirio { margin-top: 35px; font-size: 2rem; opacity: 0.8; }
+
+    .noche {
+      background: radial-gradient(circle at top, #2a0a3d, #0f0f14);
+      border-radius: 30px;
+      padding: 90px 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    }
+
+    .poema {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      max-width: 620px;
+      margin: auto;
+      line-height: 2.1;
+      opacity: 0;
+      animation: aparecer 3s ease forwards;
+    }
+
+    @keyframes aparecer { to { opacity: 0.95; } }
+
+    .luna {
+      font-size: 3rem;
+      margin-top: 40px;
+      animation: flotar 6s ease-in-out infinite;
+    }
+
+    .estrellas span {
+      position: absolute;
+      font-size: 1.2rem;
+      animation: brillar 4s ease-in-out infinite;
+    }
+
+    .estrellas span:nth-child(1){ top:20%; left:15%; }
+    .estrellas span:nth-child(2){ top:30%; left:70%; animation-delay:1s; }
+    .estrellas span:nth-child(3){ top:55%; left:40%; animation-delay:2s; }
+    .estrellas span:nth-child(4){ top:70%; left:20%; animation-delay:3s; }
+    .estrellas span:nth-child(5){ top:15%; left:50%; animation-delay:4s; }
+
+    @keyframes flotar {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes brillar {
+      0%,100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .manifesto {
+      background: rgba(255,255,255,0.08);
+      border-radius: 25px;
+      padding: 50px 40px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 70px 20px;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    audio { display:none; }
+  </style>
+</head>
+<body>
+
+  <div class="intro" id="intro">
+    <button onclick="startLove()">Para ti 💗</button>
+  </div>
+
+  <div class="flores">
+    <span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span>
+  </div>
+
+  <section class="hero">
+    <h1>Para Sammy Rizitos</h1>
+    <p>
+      Hay personas que no necesitan ruido para quedarse.<br>
+      Este pequeño espacio hecho con cariño, cuidado y verdad.
+    </p>
+    <div class="lirio">🌸</div>
+  </section>
+
+  <section class="noche">
+    <h2>Una noche tranquila</h2>
+    <p class="poema">
+      A veces la calma llega sin avisar,<br>
+      como una noche que no pide nada.<br>
+      Y quedarse, en silencio,<br>
+      también es una forma de cuidado.
+    </p>
+    <div class="luna">🌙</div>
+    <div class="estrellas">
+      <span>✨</span><span>✨</span><span>✨</span><span>✨</span><span>✨</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="manifesto">
+      <p>
+        No prometo perfección.<br>
+        Prometo cuidado, respeto<br>
+        y aprender lo que te gusta.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Gracias por existir tal como eres.<br>
+  </footer>
+
+  <audio id="music" loop>
+    <source src="https://raw.githubusercontent.com/fabidz13/Canciones/main/Jungkook%20%5BBTS%5D%20-%20Still%20With%20You%20(Traducida%20al%20espa%C3%B1ol).mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function startLove() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('music').play();
+    }
+  </script>
+
+</body>
+</html>
